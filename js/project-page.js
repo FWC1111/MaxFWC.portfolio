@@ -18,7 +18,7 @@
       return `
         <div class="project-video project-video--placeholder reveal">
           <p>Add a trailer in <code>js/data.js</code> → <code>detail.video</code></p>
-          <span>Place file at <code>videos/games/your-project.mp4</code></span>
+          <span>Set <code>detail.video.src</code> to your unlisted YouTube URL or video ID</span>
         </div>
       `;
     }

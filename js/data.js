@@ -9,7 +9,7 @@
  * ADD A GAME PROJECT:
  *   Each project needs a unique `id` (used in project.html?id=...).
  *   Fill `detail.video` and `detail.description` for the project page.
- *   Video: type "file" + videos/games/name.mp4  OR  type "youtube" + URL/ID.
+ *   Video: type "youtube" + unlisted URL or 11-char video ID (see detail.video below).
  *
  *   Copy an object in `projects`, set `image` under images/games/,
  *   and pick accent: "accent" | "cyan" | "purple" | "amber".
@@ -93,9 +93,8 @@ const PORTFOLIO_DATA = {
         role: "Gameplay Programmer",
         year: "2024",
         video: {
-          type: "file",
-          src: "videos/games/crimsonwood.mp4",
-          poster: "images/games/crimsonwood.png",
+          type: "youtube",
+          src: "", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
         },
         description: [
           "A 2D roguelike built in <strong>Unity (C#)</strong> with room-based combat and escalating difficulty. I designed and implemented the <strong>Boss AI</strong> as a modular finite state machine, making it easy to add new attack patterns and phase transitions.",
@@ -119,9 +118,8 @@ const PORTFOLIO_DATA = {
         role: "Gameplay Programmer/Designer",
         year: "2024",
         video: {
-          type: "file",
-          src: "videos/games/initialz2d.mp4",
-          poster: "images/games/initialz2d.png",
+          type: "youtube",
+          src: "", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
         },
         description: [
           "A mobile-friendly <strong>2D racing game</strong> where opponents follow a series of <strong>waypoints</strong> placed along the track. NPCs simply move toward the next <strong>waypoint</strong> without complex acceleration or braking logic.",
@@ -145,9 +143,8 @@ const PORTFOLIO_DATA = {
         role: "Level & Systems Designer",
         year: "2024",
         video: {
-          type: "file",
-          src: "videos/games/cluckstronauts.mp4",
-          poster: "images/games/cluckstronauts.png",
+          type: "youtube",
+          src: "", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
         },
         description: [
           "A <strong>3D puzzle platformer</strong> built in <strong>Unreal Engine (Blueprint)</strong>. The player must collect all target items and escape within a time limit.",
@@ -170,9 +167,8 @@ const PORTFOLIO_DATA = {
         role: "Solo Developer",
         year: "2025",
         video: {
-          type: "file",
-          src: "videos/games/lunararcadia.mp4",
-          poster: "images/games/lunararcadia.png",
+          type: "youtube",
+          src: "", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
         },
         description: [
           "An experimental <strong>2D + 3D hybrid RPG</strong> where I built every core system alone: exploration, inventory, gathering, crafting, and combat.",
@@ -196,7 +192,7 @@ const PORTFOLIO_DATA = {
       detail: {
         role: "Your Role",
         year: "2026",
-        video: { type: "file", src: "videos/games/my-new-game.mp4", poster: "images/games/my-new-game.png" },
+        video: { type: "youtube", src: "" },
         description: ["Longer paragraph one.", "Longer paragraph two."],
         links: [{ label: "Play on Itch.io", url: "https://itch.io/...", external: true }],
       },
