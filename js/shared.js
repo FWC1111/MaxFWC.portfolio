@@ -62,12 +62,28 @@ const PortfolioShared = (function () {
     if (/^[\w-]{11}$/.test(trimmed)) return trimmed;
     try {
       const url = new URL(trimmed);
-      if (url.hostname.includes("youtu.be")) return url.pathname.slice(1);
-      if (url.hostname.includes("youtube.com")) return url.searchParams.get("v");
+      if (url.hostname.includes("youtu.be")) {
+        const id = url.pathname.replace(/^\//, "").split("/")[0];
+        return id && /^[\w-]{11}$/.test(id) ? id : null;
+      }
+      if (url.hostname.includes("youtube.com")) {
+        const fromQuery = url.searchParams.get("v");
+        if (fromQuery && /^[\w-]{11}$/.test(fromQuery)) return fromQuery;
+        const fromPath = url.pathname.match(/\/(?:embed|shorts|live)\/([\w-]{11})/);
+        if (fromPath) return fromPath[1];
+      }
     } catch (_) {
       return null;
     }
     return null;
+  }
+
+  function isYoutubeVideo(video) {
+    if (!video || !video.src) return false;
+    const type = String(video.type || "").toLowerCase().trim();
+    if (type === "youtube") return true;
+    if (type === "file") return false;
+    return Boolean(parseYoutubeId(video.src));
   }
 
   return {
@@ -80,5 +96,6 @@ const PortfolioShared = (function () {
     getProjectById: getProjectById,
     getProjectUrl: getProjectUrl,
     parseYoutubeId: parseYoutubeId,
+    isYoutubeVideo: isYoutubeVideo,
   };
 })();

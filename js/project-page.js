@@ -16,24 +16,26 @@
   function renderVideo(video) {
     if (!video || !video.src) {
       return `
-        <div class="project-video project-video--placeholder reveal">
+        <div class="project-video project-video--placeholder reveal visible">
           <p>Add a trailer in <code>js/data.js</code> → <code>detail.video</code></p>
           <span>Set <code>detail.video.src</code> to your unlisted YouTube URL or video ID</span>
         </div>
       `;
     }
 
-    if (video.type === "youtube") {
+    if (PortfolioShared.isYoutubeVideo(video)) {
       const videoId = PortfolioShared.parseYoutubeId(video.src);
-      if (!videoId) return `<div class="project-video project-video--placeholder reveal"><p>Invalid YouTube URL or ID</p></div>`;
+      if (!videoId) {
+        return `<div class="project-video project-video--placeholder reveal visible"><p>Invalid YouTube URL or ID</p></div>`;
+      }
       return `
-        <div class="project-video reveal">
+        <div class="project-video reveal visible">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/${videoId}?rel=0"
+            src="https://www.youtube.com/embed/${videoId}?rel=0"
             title="Project trailer"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
-            loading="lazy"
           ></iframe>
         </div>
       `;

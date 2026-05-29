@@ -81,7 +81,7 @@ const PORTFOLIO_DATA = {
   projects: [
     {
       id: "crimsonwood",
-      title: "2D Roguelike",
+      title: "2D Rogue-lite",
       engine: "Unity · C#",
       accent: "accent",
       image: "images/games/crimsonwood.png",
@@ -97,7 +97,7 @@ const PORTFOLIO_DATA = {
           src: "https://youtu.be/wiA7uWxgYpo", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
         },
         description: [
-          "A 2D roguelike built in <strong>Unity (C#)</strong> with room-based combat and escalating difficulty. I designed and implemented the <strong>Boss AI</strong> as a modular finite state machine, making it easy to add new attack patterns and phase transitions.",
+          "A 2D rogue-lite built in <strong>Unity (C#)</strong> with room-based combat and escalating difficulty. I designed and implemented the <strong>Boss AI</strong> as a modular finite state machine, making it easy to add new attack patterns and phase transitions.",
           "Outside the run, players unlock permanent upgrades through a <strong>PHP + MySQL</strong> backend. The API supports creating, reading, and updating player profiles and meta-progression data—bridging the game client with a simple web stack.",
           "This project helped me gain hands-on experience in <strong>combat feel</strong>, <strong>boss AI logic (using FSM)</strong>, and basic full-stack integration between <strong>Unity</strong> and a <strong>PHP/MySQL</strong> backend.",
         ],
