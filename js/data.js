@@ -94,7 +94,7 @@ const PORTFOLIO_DATA = {
         year: "2024",
         video: {
           type: "youtube",
-          src: "", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
+          src: "https://youtu.be/wiA7uWxgYpo", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
         },
         description: [
           "A 2D roguelike built in <strong>Unity (C#)</strong> with room-based combat and escalating difficulty. I designed and implemented the <strong>Boss AI</strong> as a modular finite state machine, making it easy to add new attack patterns and phase transitions.",
@@ -119,7 +119,7 @@ const PORTFOLIO_DATA = {
         year: "2024",
         video: {
           type: "youtube",
-          src: "", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
+          src: "https://youtu.be/axj-ok5NnR0", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
         },
         description: [
           "A mobile-friendly <strong>2D racing game</strong> where opponents follow a series of <strong>waypoints</strong> placed along the track. NPCs simply move toward the next <strong>waypoint</strong> without complex acceleration or braking logic.",
@@ -144,7 +144,7 @@ const PORTFOLIO_DATA = {
         year: "2024",
         video: {
           type: "youtube",
-          src: "", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
+          src: "https://youtu.be/LO9tbT8NhuI", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
         },
         description: [
           "A <strong>3D puzzle platformer</strong> built in <strong>Unreal Engine (Blueprint)</strong>. The player must collect all target items and escape within a time limit.",
@@ -168,7 +168,7 @@ const PORTFOLIO_DATA = {
         year: "2025",
         video: {
           type: "youtube",
-          src: "", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
+          src: "https://youtu.be/Hah3FD7PFtU", // e.g. https://youtu.be/VIDEO_ID or paste 11-char ID
         },
         description: [
           "An experimental <strong>2D + 3D hybrid RPG</strong> where I built every core system alone: exploration, inventory, gathering, crafting, and combat.",
